@@ -39,16 +39,16 @@ function Header() {
 
     return (
         <div className='flex items-center justify-between p-5 text-white'>
-            <div className='flex items-center gap-8'>
-                <img src={logo} className='w-[20px] md:w-[75px] object-cover' alt="Logo" />
+            <div className='flex items-center gap-10'>
+                <img src={logo} className='w-[70px] md:w-[115px] object-cover' alt="Logo" />
                 
-                <div className='hidden md:flex gap-10'>
+                <div className='hidden md:flex gap-12'>
                     {menu.map((item) => (
                         <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
                     ))}
                 </div>
 
-                <div className='flex md:hidden relative'>
+                <div className='flex md:hidden relative gap-6'>
                     {menu.slice(0, 3).map((item) => (
                         <HeaderItem key={item.name} name={''} Icon={item.icon} />
                     ))}
@@ -57,7 +57,7 @@ function Header() {
                     </div>
 
                     {toggle && (
-                        <div className='absolute mt-3 bg-[#121212] border border-gray-700 p-3 px-2 py-4 rounded-md z-10'>
+                        <div className='absolute  bg-[#121212] border border-gray-700  px-2 py-2 mt-7 rounded-md '>
                             {menu.slice(3).map((item) => (
                                 <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
                             ))}
