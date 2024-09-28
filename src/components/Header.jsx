@@ -52,7 +52,7 @@ const [toggle,setToggle]=useState(false);
                     <div className='md:hidden' onClick={()=>setToggle(!toggle)}>
                         <HeaderItem name={''} Icon={HiDotsVertical} />
                        {toggle?<div className='absolute mt-3 bg-[#121212] 
-                        border-[1px] border-gray-700 p-3 px-5 py-4'>
+                        border-[1px] border-gray-700 p-3 p-4 '>
                             {menu.map((item, index) => index > 2 && (
                                 <HeaderItem name={item.name} Icon={item.icon} />
                             ))}
