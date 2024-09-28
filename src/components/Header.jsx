@@ -49,21 +49,22 @@ function Header() {
                 </div>
 
                 <div className='flex md:hidden relative gap-6'>
-                    {menu.slice(0, 3).map((item) => (
-                        <HeaderItem key={item.name} name={''} Icon={item.icon} />
-                    ))}
-                    <div onClick={() => setToggle(!toggle)}>
-                        <HeaderItem name={''} Icon={HiDotsVertical} />
-                    </div>
+    {menu.slice(0, 3).map((item) => (
+        <HeaderItem key={item.name} name={''} Icon={item.icon} />
+    ))}
+    <div onClick={() => setToggle(!toggle)}>
+        <HeaderItem name={''} Icon={HiDotsVertical} />
+    </div>
 
-                    {toggle && (
-                        <div className='absolute  bg-[#121212] border border-gray-700  px-2 py-2 mt-7 rounded-md '>
-                            {menu.slice(3).map((item) => (
-                                <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
-                            ))}
-                        </div>
-                    )}
-                </div>
+    {toggle && (
+        <div className='absolute bg-[#121212] border border-gray-700 right-0 px-2 py-2 mt-7 rounded-md transform translate-x-4'>
+            {menu.slice(3).map((item) => (
+                <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+            ))}
+        </div>
+    )}
+</div>
+
             </div>
 
             <img
